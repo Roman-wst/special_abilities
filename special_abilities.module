@@ -1,0 +1,71 @@
+<?php //$Id: special_abilities.module, v 1.0 2016/10/21 16:56:08 itinity Exp $
+/**
+ * Copyright 2016-2017 Itinity Ltd. (itinity.ru). All rights reserved.
+ * Licensed under the GNU General Public License, version 2 or later.
+ */
+
+
+/**
+ * Implements hook_menu().
+ */
+/*function special_abilities_menu() {
+  $items['special_abilities'] = array(
+    'title' => 'Special abilities page',
+    'type' => MENU_CALLBACK,
+    'page callback' => 'special_abilities_page_content', 
+    'access callback' => TRUE,
+  );
+  return $items;
+}*/
+
+/**
+ * Special abilities page content.
+*/
+/*function special_abilities_page_content() {
+  return l(theme('pictogram', array('icon' => 'eye')) . t('Version for the visually impaired'), '#', array('external' => TRUE, 'html' => TRUE, 'attributes' => array('class' => array('special-abilities-link'))));
+}*/
+
+/**
+ * Implements hook_block_info()
+ */
+function special_abilities_block_info() {
+  $blocks['special_abilities'] = array(
+    'info' => t('Special abilities'), 
+    'cache' => DRUPAL_NO_CACHE,
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view()
+ */
+function special_abilities_block_view($delta = ''){
+  switch($delta){
+    case 'special_abilities':
+      drupal_add_css(drupal_get_path('module', 'special_abilities') . '/special_abilities.css');
+      drupal_add_js(drupal_get_path('module', 'special_abilities') . '/special_abilities.js', 'file');
+  
+      //$block['subject'] = t('Block with special abilities');
+      $block['content'] = theme('special_abilities_block_template', array());
+      return $block;
+      break;
+  }
+}
+
+function special_abilities_theme() {   
+  $module_path = drupal_get_path('module', 'special_abilities');
+  $base = array(
+    'path' => "$module_path",   
+  );
+  return array(
+    'special_abilities_block_template' => $base + array(
+      'template' => 'special_abilities',
+    ),   
+  ); 
+}
+
+
+
+
+

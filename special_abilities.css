@@ -1,0 +1,117 @@
+.block-special-abilities, .special-abilities,
+.special-abilities-off .special-abilities,
+.special-abilities-on .special-abilities-link-on {
+  display: none;  
+}
+
+html.js .block-special-abilities {
+  display: block;
+}
+.special-abilities-on body {
+  margin-top: 42px;
+}
+
+.special-abilities-size-1 .block:not(.block-special-abilities) {font-size: 100%;}
+.special-abilities-size-2 .block:not(.block-special-abilities) {font-size: 130%;}
+.special-abilities-size-3 .block:not(.block-special-abilities) {font-size: 150%;}
+
+.special-abilities-color-1, .special-abilities-color-1 * {background-color: #000 !important; color: #fff !important;}
+.special-abilities-color-2, .special-abilities-color-2 * {background-color: #fff !important; color: #000 !important;}
+.special-abilities-color-3, .special-abilities-color-3 * {background-color: #9DD1FF !important; color: #003165 !important;}
+
+.special-abilities-on.special-abilities-size-2 .form-submit[style*="height"],
+.special-abilities-on.special-abilities-size-3 .form-submit[style*="height"] {
+  padding-top: 0;
+}
+
+/*
+.special-abilities-img-visible img {display: block !important;} 
+.special-abilities-img-hide img {display: none !important;} 
+*/
+
+/* panel */
+.special-abilities-on, .special-abilities-on * {
+  background-image: none !important;
+  letter-spacing: 0.1em;
+  opacity: 1 !important;
+}
+
+.special-abilities-on .special-abilities {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 0.5em 0;
+  text-align: center;
+  background-color: #DADADA !important;
+  color: #000 !important;
+}
+.special-abilities-on.admin-menu .special-abilities {
+  top: 33px;
+}
+
+.special-abilities * {
+  background-color: transparent !important;
+  color: #000 !important;
+  letter-spacing: normal; 
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1em;
+}
+
+a[class*='special-abilities-link-'] {
+  font-size: 1.2em;  
+}
+
+a[class*='special-abilities-link-'] .icon-eye {
+  font-size: 1.5em;
+  margin-right: 0.3em;
+  color: inherit !important;
+  background-color: inherit !important;
+}
+
+.special-abilities .title {
+  margin: 0 1em;
+}
+
+
+.special-abilities .font-size > span[class*='size-'] {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 0.3em;
+  margin-right: 0.6em;
+}
+
+.special-abilities .size-1 {font-size: 1.2em;}
+.special-abilities .size-2 {font-size: 1.4em;}
+.special-abilities .size-3 {font-size: 1.6em;}
+
+.special-abilities .color-scheme > span[class*='color-'] {
+  padding: 0.5em;
+  width: 2em;
+  height: 2em;  
+  cursor: pointer;
+  position: relative;
+}
+
+.special-abilities .color-scheme > span[class*='color-']::after {
+  content: '';
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  width: 1em;
+  height: 1em;
+  border-radius: 100%;
+}
+
+.special-abilities .color-1 {background-color: #000 !important; color: fff !important;}
+.special-abilities .color-1::after {background-color: #fff !important;}
+.special-abilities .color-2 {background-color: #fff !important; color: 000 !important;}
+.special-abilities .color-2::after {background-color: #000 !important;}
+.special-abilities .color-3 {background-color: #9DD1FF !important; color: #003165 !important;}
+.special-abilities .color-3::after {background-color: #003165 !important;}
+
+
+

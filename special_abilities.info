@@ -1,0 +1,6 @@
+; $Id: special_abilities.info, v 1.0 2016/10/21 16:56:08 itinity Exp $
+name = special_abilities
+description = Special abilities: Module for Physically challenged person
+;package = 
+version = "7.x"
+core = "7.x"

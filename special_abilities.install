@@ -1,0 +1,18 @@
+<?php //$Id: special_abilities.install, v 1.0 2016/10/21 16:56:08 itinity Exp $
+
+
+
+
+/**
+ * Implements hook_install()
+ */
+function special_abilities_install() {
+	
+}
+
+/**
+ * Implements hook_uninstall()
+ */
+function special_abilities_uninstall() {
+	
+}
